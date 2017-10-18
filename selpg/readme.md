@@ -1,4 +1,4 @@
-##Selpg
+## Selpg
 ### Usage
 　　selpg -s sNumber -e eNumber -l lnumber    
 
@@ -14,7 +14,7 @@ usage of selpg
 `-f` bool           
 　　whether seperate pages          
 
-###Examples        
+### Examples        
 file.txt           
 line 1            
 line 2          
