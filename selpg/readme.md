@@ -35,30 +35,37 @@ line 3
 line 4              
 
 `$ selpg -s 2 -e 2 -l 2 -d newFile.txt file.txt`              
+
 output:              
 successful write to newFile.txt              
 
 Then `$ selpg -s 1 -e 10 newFile.txt`              
+
 output:              
 line 3              
 line 4              
 
 `$ selpg -s 2 -e 1 file.txt`              
+
 output:              
 start should be less than end              
 
 `$ selpg -s 0 -e 1 file.txt`              
+
 output:              
 start should be a positive number              
 
 `$ selpg -s 1 -e 2 -l -3 file.txt`              
+
 output:              
 length should be a positive number              
 
 `$ selpg -s 1 -e 2 file`              
+
 output:              
 An error occurred on opening the file              
 
 `$ selpg -s 1 -e 2 -d newFile.txt`              
+
 output:              
 An error occurred on opening the file              
