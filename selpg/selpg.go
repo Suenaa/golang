@@ -141,11 +141,11 @@ func main()  {
 	initSelpg(&Selpg)
 
 	//selpg -s 1 -e 2 -l 3 file
-	flag.IntVar(&Selpg.start, "s", -1, "start line")
-	flag.IntVar(&Selpg.end, "e", -1, "end line")
+	flag.IntVar(&Selpg.start, "s", -1, "starting index of page")
+	flag.IntVar(&Selpg.end, "e", -1, "ending index page")
 	flag.IntVar(&Selpg.length, "l", 72, "page length")
-	flag.BoolVar(&Selpg.f, "f", false, "seperate pages")
-	flag.StringVar(&Selpg.printDest, "d", "", "print name")
+	flag.BoolVar(&Selpg.f, "f", false, "whether seperate pages")
+	flag.StringVar(&Selpg.printDest, "d", "", "printfile name")
 	flag.Parse()
 
 	if len(flag.Args()) > 0 {
