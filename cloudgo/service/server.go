@@ -1,34 +1,11 @@
 package service
 
-import(
-	"net/http"
-	"github.com/unrolled/render"
-	"github.com/gorilla/mux"
-	"github.com/codegangsta/negroni"
-)
+import "github.com/go-martini/martini"
 
-func NewServer() *negroni.Negroni {
-	formatter := render.New(render.Options{
-		IndentJSON: true,
-		})
-	n := negroni.Classic()
-	mx := mux.NewRouter()
-
-	initRoutes(mx, formatter)
-
-	n.UseHandler(mx)
-	return n
+func NewServer(port string) {
+	m := martini.Classic()
+	m.Get("/", func() string {
+		return "Hello Golang!"
+	})
+	m.RunOnAddr(":" + port)
 }
-
-func initRoutes(mx *mux.Router, formatter *render.Render) {
-	mx.HandleFunc("/hello/{id}", testHandler(formatter)).Methods("GET")
-}
-
-func testHandler(formatter *render.Render) http.HandlerFunc {
-	return func(w http.ResponseWriter, req *http.Request) {
-		vars := mux.Vars(req)
-		id := vars["id"]
-		formatter.JSON(w, http.StatusOK, struct{Test string} {"Hello " + id})
-	}
-}
-
