@@ -1,5 +1,16 @@
 # cloudgo
 
+## Martini
+本次作业使用了Martini框架。            
+比较多种web应用框架之后发现，Martini框架是一个强大而简单的框架，三四行语句就能完成此次实验要求，构建一个简单的服务器。
+```
+  m := martini.Classic()
+  m.Get("/", func() string {
+    return "Hello Golang!"
+  })
+  m.RunOnAddr(":" + port)
+```
+
 ## curl测试
 运行cloudgo：                              
 ```
@@ -92,3 +103,6 @@ Percentage of the requests served within a certain time (ms)
   99%     76
  100%    111 (longest request)
  ```
+
+测试用时总共0.708秒，1000个请求全部成功完成，传输速度179.38Kbytes/sec，每秒请求平均数目1412.98，平均请求响应时间70.772ms。
+50%的请求在70ms内完成，最大的响应时间为111ms。
