@@ -2,10 +2,12 @@
 
 ## curl测试
 运行cloudgo：                              
-```./main -p 9090
+```
+./main -p 9090
 [martini] listening on :9090 (development)
 [martini] Started GET / for [::1]:55107
-[martini] Completed 200 OK in 970.5µs```
+[martini] Completed 200 OK in 970.5µs
+```
 
 ```
 curl -v http://localhost:9090
