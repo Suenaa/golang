@@ -59,7 +59,8 @@ Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 433
 ```
-<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/static.PNG)</p>
+                                            
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/static.PNG)
 
 
 **简单JS访问：**
@@ -101,17 +102,20 @@ InputFields       : {}
 Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 52
-```
-<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/json.PNG)</p>
+```                                                       
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/json.PNG)                              
 
 
-**提交表单，并输出一个表格：**
-访问 http://localhost:8080/login:
-<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/login.PNG)</p>
-输入信息并且点击登录：
-<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/loginsuc.PNG)</p>
+**提交表单，并输出一个表格：**                                                       
 
+访问 http://localhost:8080/login:     
 
-**对/unknow给出开发中的提示，返回码501：**
-访问 http://localhost:8080/unknow
-<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/unknow.PNG)</p>
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/login.PNG)                           
+输入信息并且点击登录：                                                                                 
+
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/loginsuc.PNG)                                       
+                                          
+                                                                             
+**对/unknow给出开发中的提示，返回码501：**                                                
+访问 http://localhost:8080/unknow                                
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/unknow.PNG)
