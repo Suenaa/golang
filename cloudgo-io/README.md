@@ -15,7 +15,7 @@ or
 ```
 
 ## Example
-** 静态文件服务：**
+**静态文件服务：**
 ```
 ./main
 [martini] listening on :8080 (development)
@@ -59,10 +59,10 @@ Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 433
 ```
-![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/static.PNG)
+<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/static.PNG)</p>
 
 
-** 简单JS访问：**
+**简单JS访问：**
 ```
 ./main
 [martini] listening on :8080 (development)
@@ -102,16 +102,16 @@ Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 52
 ```
-![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/json.PNG)
+<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/json.PNG)</p>
 
 
-** 提交表单，并输出一个表格：**
+**提交表单，并输出一个表格：**
 访问 http://localhost:8080/login:
-![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/login.PNG)
+<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/login.PNG)</p>
 输入信息并且点击登录：
-![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/loginsuc.PNG)
+<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/loginsuc.PNG)</p>
 
 
-** 对/unknow给出开发中的提示，返回码501：**
+**对/unknow给出开发中的提示，返回码501：**
 访问 http://localhost:8080/unknow
-![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/unknow.PNG)
+<p>![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/unknow.PNG)</p>
