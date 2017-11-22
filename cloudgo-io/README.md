@@ -107,7 +107,16 @@ RawContentLength  : 52
 
 
 **提交表单，并输出一个表格：**                                                       
-
+```
+./main.go
+[martini] listening on :8080 (development)
+[martini] Started GET /login for [::1]:52322
+[martini] Completed 200 OK in 1.0005ms
+[martini] Started POST /login for [::1]:52322
+username: abc
+password: 123
+[martini] Completed 200 OK in 1.0009ms
+```
 访问 http://localhost:8080/login:     
 
 ![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/login.PNG)                           
@@ -117,5 +126,12 @@ RawContentLength  : 52
                                           
                                                                              
 **对/unknow给出开发中的提示，返回码501：**                                                
+```
+./main.go
+[martini] listening on :8080 (development)
+[martini] Started GET /unknow for [::1]:56830
+[martini] Completed 501 Not Implemented in 500.4µs
+```
+
 访问 http://localhost:8080/unknow                                
 ![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/unknow.PNG)
