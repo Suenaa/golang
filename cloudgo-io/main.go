@@ -3,6 +3,7 @@ package main
 import (
 	flag "github.com/spf13/pflag"
 	"github.com/Suenaa/golang/cloudgo-io/service"
+	"service"
 )
 
 const (

@@ -4,6 +4,7 @@ import(
 	"github.com/go-martini/martini"
 	"net/http"
 	"github.com/unrolled/render"
+	"fmt"
 )
 
 var port string
@@ -17,7 +18,7 @@ func NewServer(Port string) *martini.ClassicMartini {
 func RunServer(m *martini.ClassicMartini) {
 	formatter := render.New(render.Options{
 		Directory:  "templates",
-		Extensions: []string{".html"},
+		Extensions: []string{".html", ".tmpl"},
 		IndentJSON: true,
 		})
 	m.Use(martini.Static("assets"))
@@ -33,19 +34,19 @@ func RunServer(m *martini.ClassicMartini) {
 		})
 	m.Post("/login", func(res http.ResponseWriter, req *http.Request) {
 		req.ParseForm()
-		var rt string
-		if req.Form["username"][0] == "abc" && req.Form["password"][0] == "123" {
-			rt = "login successfully"
-		} else {
-			rt = "username or password is wrong"
-		}
-		formatter.HTML(res, http.StatusOK, "success", struct {
-			Content string `json:"content"`
-			} {Content: rt})
+		
+		formatter.HTML(res, http.StatusOK, "success", struct{
+			Username string
+			Password string
+			} {
+				Username: req.Form["username"][0],
+				Password: req.Form["password"][0]})
+
+		fmt.Println("username:", req.Form["username"][0])
+		fmt.Println("password:", req.Form["password"][0])
 		})
 	m.Get("/unknow", func(res http.ResponseWriter, req *http.Request) {
-		//res.WriteHeader(501)
-		formatter.HTML(res, http.StatusNotImplemented, "NotImplemented", "Not Implemented")
+		http.Error(res, "501 page not implemented", http.StatusNotImplemented)
 		})
 	m.RunOnAddr(":" + port)
 }
