@@ -5,6 +5,8 @@
 - 提交表单，并输出一个表格
 - 对/unknow给出开发中的提示，返回码501
 
+因上次使用了maritini框架，本次作业也使用martini框架。
+
 ## Usage
 ```
 ./main
@@ -13,7 +15,7 @@ or
 ```
 
 ## Example
-静态文件服务：
+** 静态文件服务：**
 ```
 ./main
 [martini] listening on :8080 (development)
@@ -57,9 +59,10 @@ Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 433
 ```
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/static.PNG)
 
 
-简单JS访问：
+** 简单JS访问：**
 ```
 ./main
 [martini] listening on :8080 (development)
@@ -99,8 +102,16 @@ Links             : {}
 ParsedHtml        : mshtml.HTMLDocumentClass
 RawContentLength  : 52
 ```
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/json.PNG)
 
-提交表单，并输出一个表格：
+
+** 提交表单，并输出一个表格：**
+访问 http://localhost:8080/login:
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/login.PNG)
+输入信息并且点击登录：
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/loginsuc.PNG)
 
 
-对/unknow给出开发中的提示，返回码501：
+** 对/unknow给出开发中的提示，返回码501：**
+访问 http://localhost:8080/unknow
+![](https://github.com/Suenaa/golang/blob/master/cloudgo-io/README/unknow.PNG)
