@@ -5,7 +5,7 @@
 - 提交表单，并输出一个表格
 - 对/unknow给出开发中的提示，返回码501
 
-因上次使用了maritini框架，本次作业也使用martini框架。
+因上次使用了martini框架，本次作业也使用martini框架。
 
 ## Usage
 ```
