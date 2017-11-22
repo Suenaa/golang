@@ -44,7 +44,8 @@ func RunServer(m *martini.ClassicMartini) {
 			} {Content: rt})
 		})
 	m.Get("/unknow", func(res http.ResponseWriter, req *http.Request) {
-		res.WriteHeader(501)
+		//res.WriteHeader(501)
+		formatter.HTML(res, http.StatusNotImplemented, "NotImplemented", "Not Implemented")
 		})
 	m.RunOnAddr(":" + port)
 }
