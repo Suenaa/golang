@@ -21,8 +21,8 @@ func (*UserInfoAtomicService) FindAll() []UserInfo {
 	u := new(UserInfo)
 	var uList []UserInfo
 	for rows.Next() {
-		err = rows.Scan(bean)
-		uList = append(uList, *bean)
+		err = rows.Scan(u)
+		uList = append(uList, *u)
 	}
 	return uList
 }

@@ -1,9 +1,6 @@
 package entities
 
-import(
-	"github.com/go-xorm/xorm"
-	"github.com/go-sql-driver/mysql"
-)
+import "github.com/go-xorm/xorm"
 
 var engine *xorm.Engine
 
