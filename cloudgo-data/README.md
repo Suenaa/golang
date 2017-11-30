@@ -6,7 +6,7 @@ xorm确实是一个很省力的东西，用xorm即可实现课程博客上的dao
 
 ## 实验结果
 
-**添加数据**
+**添加数据**                                                           
 post命令
 ```
 curl -d "username=name&departname=d" http://localhost:8080/service/userinfo
@@ -18,7 +18,7 @@ curl -d "username=name&departname=d" http://localhost:8080/service/userinfo
 }
 ```
 
-***查询数据***
+**查询数据**
 ```
 $ curl http://localhost:8080/service/userinfo?userid=
 [
