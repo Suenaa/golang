@@ -1,12 +1,12 @@
 # golang构建数据服务
 
-使用了xorm实现了课程博客内容。
+使用了xorm实现了课程博客内容。                                                              
 xorm确实是一个很省力的东西，用xorm即可实现课程博客上的dao内容。
 
 
 ## 实验结果
 
-***添加数据***
+**添加数据**
 post命令
 ```
 curl -d "username=name&departname=d" http://localhost:8080/service/userinfo
@@ -33,7 +33,7 @@ $ curl http://localhost:8080/service/userinfo?userid=
 
 
 ## ab测试
-***使用xorm的ab测试***
+**使用xorm的ab测试**
 ```
 .\ab -n 1000 -c 100 http://localhost:8080/
 This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
@@ -93,7 +93,7 @@ Percentage of the requests served within a certain time (ms)
 ```
 
 
-***使用database/sql的ab测试***
+**使用database/sql的ab测试**
 ```
  .\ab -n 1000 -c 100 http://localhost:8080/
 This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
