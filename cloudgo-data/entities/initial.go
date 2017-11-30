@@ -1,16 +1,21 @@
 package entities
 
-import "github.com/go-xorm/xorm"
+import(
+	"github.com/go-xorm/xorm"
+	_ "github.com/go-sql-driver/mysql"
+)
 
 var engine *xorm.Engine
 
 func init() {
-	e, err := xorm.NewEngine("mysql", "root:root@tcp(127.0.0.1:3305)/test?charset=utf8&parseTime=true")
+	e, err := xorm.NewEngine("mysql", "root:
+		@tcp(127.0.0.1:3306)/test?charset=utf8&parseTime=true")
 	if err != nil {
 		panic(err)
 	}
+	err = e.Sync2(new(UserInfo))
+	checkErr(err)
 	engine = e
-	engine.Sync2(new(UserInfo))
 }
 
 func checkErr(err error) {
